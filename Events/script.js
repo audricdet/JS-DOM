@@ -17,9 +17,13 @@ const create_div_green = () => {
     const div_green = document.createElement('div');
     div_green.className = 'displayedsquare green';
     wrapper.appendChild(div_green);
+    div_green.addEventListener('click', e => {
+        return alert ('The square is green !')
+    });
 }
 
 green.addEventListener('click', create_div_green);
+
 
 // VIOLET 
 
@@ -27,8 +31,10 @@ const create_div_violet = () => {
     const div_violet = document.createElement('div');
     div_violet.className = 'displayedsquare violet';
     wrapper.appendChild(div_violet);
+    div_violet.addEventListener('click', e_2 => {
+        return alert ('The square is violet !')
+    });
 }
-
 violet.addEventListener('click', create_div_violet);
 
 // ORANGE
@@ -37,6 +43,9 @@ const create_div_orange = () => {
     const div_orange = document.createElement('div');
     div_orange.className = 'displayedsquare orange';
     wrapper.appendChild(div_orange);
+    div_orange.addEventListener('click', e_3 => {
+        return alert ('The square is orange !')
+    });
 }
 
 orange.addEventListener('click', create_div_orange);
@@ -113,14 +122,3 @@ body.addEventListener('keyup', s_event => {
         square_delete();
     }
 });
-
-// Click on new square
-
-const new_square_green = document.querySelector('div_green')
-
-const alert_green = () => {
-    return alert ('This square is green !');
-}
-
-new_square_green.addEventListener('click', alert_green);
-
